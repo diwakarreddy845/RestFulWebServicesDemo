@@ -22,9 +22,8 @@
                 <multicast-port>54327</multicast-port>
             </multicast>
             <tcp-ip enabled="true">
-                <interface>127.0.0.1</interface>
                 <member-list>
-                    <member>127.0.0.1</member>
+                    <member>10.157.2.226</member>
                 </member-list>
             </tcp-ip>
         </join>
@@ -106,7 +105,7 @@
 			will get automatically evicted from the map.
 			Any integer between 0 and Integer.MAX_VALUE. 0 means infinite. Default is 0.
 		-->
-        <time-to-live-seconds>0</time-to-live-seconds>
+
         <!--
 			Maximum number of seconds for each entry to stay idle in the map. Entries that are
 			idle(not touched) for more than <max-idle-seconds> will get
@@ -210,7 +209,7 @@
         <capacity>10000</capacity>
         <backup-count>1</backup-count>
         <async-backup-count>0</async-backup-count>
-        <time-to-live-seconds>0</time-to-live-seconds>
+        <!--<time-to-live-seconds>0</time-to-live-seconds>-->
         <in-memory-format>BINARY</in-memory-format>
     </ringbuffer>
 

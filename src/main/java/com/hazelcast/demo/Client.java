@@ -14,7 +14,7 @@ import java.util.concurrent.BlockingQueue;
 public class Client {
 
     public static void main(String[] args) throws Exception {
-        boolean clientSererMode = true;
+        boolean clientSererMode = false;
         String serverFileName="C:\\Users\\c21757a\\IdeaProjects\\RestFulWebServicesDemo\\src\\main\\resources\\hazelcast.xml";
         String clientFileName= "C:\\Users\\c21757a\\IdeaProjects\\RestFulWebServicesDemo\\src\\main\\resources" +
                                "\\hazelcast-client.xml";
@@ -32,7 +32,7 @@ public class Client {
             queue.put("Hello!");
             System.out.println("Message sent by Hazelcast Client!");
 
-            HazelcastClient.shutdownAll();
+            //HazelcastClient.shutdownAll();
         }else{
             FileInputStream input = new FileInputStream(serverFileName);
             Config config = new XmlConfigBuilder(input).build();
